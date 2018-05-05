@@ -1,0 +1,17 @@
+body {
+    color: #818181;
+}
+p {
+  font-size:25px;
+}
+.navbar {  
+  background-color: #E0FFFF;
+ 
+}
+.jumbotron {
+  background-color: #E0FFFF !important;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+
+}
