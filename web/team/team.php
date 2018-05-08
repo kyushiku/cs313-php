@@ -3,7 +3,7 @@
 	<head>
 
 	</head>
-	<form action="action.php" method="post">
+	<form action="team/action.php" method="post">
         <div>Name</div>
 		<input name="name" type="text"> <br>
         <div>Email</div>
