@@ -13,7 +13,7 @@
 		<input type="radio" name="class"> WD <br>
 		<input type="radio" name="class"> CIT <br>
 		<input type="radio" name="class"> CE <br>
-		<textarea rows="4" cols="50">
+		<textarea rows="4" cols="50" name="comments">
 		</textarea>
         <input type="submit">
 	</form>
