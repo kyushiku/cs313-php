@@ -15,5 +15,6 @@
 		<input type="radio" name="class"> CE <br>
 		<textarea rows="4" cols="50">
 		</textarea>
+        <input type="submit">
 	</form>
 </html>
