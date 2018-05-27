@@ -28,13 +28,21 @@ catch (PDOException $ex)
 </head>
 <body>
     <h1>PUBG Forum</h1>
+    
+    <?php
+        foreach ($db->query('SELECT name, FROM users') as $users)
+        {
+        $name = $users["name"];
+        echo "<li>$name - Password $pass</li>";
+        }
+    ?>
+    
     <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
 
         <ul class="uk-navbar-nav">
-            <li class="uk-active"><a href="#">Active</a></li>
             <li>
-                <a href="#">Parent</a>
+                <a href="#">News</a>
                 <div class="uk-navbar-dropdown">
                     <ul class="uk-nav uk-navbar-dropdown-nav">
                         <li class="uk-active"><a href="#">Active</a></li>
@@ -43,22 +51,14 @@ catch (PDOException $ex)
                     </ul>
                 </div>
             </li>
-            <li><a href="#">Item</a></li>
+            <li><a href="#">Troubleshooting</a></li>
         </ul>
 
     </div>
 </nav>
 
     <ul>
-<?php
-foreach ($db->query('SELECT name,pass FROM users') as $users)
-{
-    $name = $users["name"];
-    $pass = $users["pass"];
-    
-    echo "<li>$name - Password $pass</li>";
-}
-?>
+
     </ul>
 
  
