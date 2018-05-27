@@ -29,12 +29,11 @@ catch (PDOException $ex)
 <body>
     <h1>PUBG Forum</h1>
     <div class="uk-navbar-right">
+        
     <?php
-        foreach ($db->query('SELECT name FROM users') as $users)
-        {
+        $db->query('SELECT name FROM users') as $users
         $name = $users["name"];
-        echo "<div "uk-navbar-right">$name</div>";
-        }
+        echo "<div>$name</div>";
     ?>
     </div>
     
