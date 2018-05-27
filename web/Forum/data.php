@@ -35,7 +35,7 @@ catch (PDOException $ex)
         $name = $users["name"];
             if ($name == 'Emma Fisher')
             {
-            echo "Welcome! "$name;
+            echo "Welcome! " . $name;
             }
         }
     ?>
@@ -72,7 +72,13 @@ catch (PDOException $ex)
     </div>
     <div class="uk-card-body">
         <p>
-         
+        <?php
+            foreach ($db->query('SELECT desc_text FROM threads') as $thread)
+            {
+                $text = $thread["desc_text"];
+                echo $text;
+            }
+            ?>
         </p>
     </div>
     <div class="uk-card-footer">
