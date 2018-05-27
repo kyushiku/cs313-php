@@ -75,7 +75,7 @@ catch (PDOException $ex)
             foreach ($db->query('SELECT desc_text FROM threads') as $thread)
             {
                 $text = $thread["desc_text"];
-                echo  $text;
+                echo $text;
             }
             ?>
         </p>
