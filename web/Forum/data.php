@@ -28,17 +28,12 @@ catch (PDOException $ex)
 
     <ul>
 <?php
-$users = $_GET["users"];
-$query = "SELECT u.name, u.pass FROM users u";
-$statement = $db->prepare($query);
-$statement->bindValue(":users", $users, PDO::PARAM_STR);
-$statement->execute();
-foreach ($statement->fetchAll(PDO::FETCH_ASSOC) as $users)
+foreach ($db->query('SELECT name,pass FROM users') as $users)
 {
     $name = $users["name"];
     $pass = $users["pass"];
     
-    echo "<li>$name ($pass) - Rated $pass</li>";
+    echo "<li>$name - Password $pass</li>";
 }
 ?>
     </ul>
