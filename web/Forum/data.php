@@ -72,10 +72,10 @@ catch (PDOException $ex)
     <div class="uk-card-body">
         <p>
             <?php
-            foreach ($db->query('SELECT text FROM threads') as $threads)
+            foreach ($db->query('SELECT "text" FROM threads') as $threads)
             {
                 $text = $threads["text"];
-                    echo  $text;
+                echo  $text;
             }
             ?>
         </p>
