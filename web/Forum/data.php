@@ -31,8 +31,8 @@ catch (PDOException $ex)
     <div class="uk-navbar-right">
         
     <?php
-        $db->query('SELECT name FROM users') as $users
-        $name = $users["name"];
+        $name = $db->query('SELECT name FROM users') as $users
+        
         echo "<div>$name</div>";
     ?>
     </div>
