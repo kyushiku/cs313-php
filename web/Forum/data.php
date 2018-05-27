@@ -33,7 +33,7 @@ catch (PDOException $ex)
         foreach ($db->query('SELECT name FROM users') as $users)
         {
         $name = $users["name"];
-        echo "<p>$name</p>";
+        echo "<div "uk-navbar-right">$name</div>";
         }
     ?>
     </div>
