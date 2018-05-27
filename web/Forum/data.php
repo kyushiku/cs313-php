@@ -28,19 +28,7 @@ catch (PDOException $ex)
 </head>
 <body>
     <h1>PUBG Forum</h1>
-    <div class="uk-navbar-right">
-        
-    <?php
-        foreach ($db->query('SELECT name FROM users') as $users)
-        {
-        $name = $users["name"];
-            if ($name == 'Emma Fisher')
-            {
-            echo "<div>$name</div>";
-            }
-        }
-    ?>
-    </div>
+    
     
     <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
@@ -55,6 +43,19 @@ catch (PDOException $ex)
                         <li><a href="#">Troubleshoot</a></li>
                     </ul>
                 </div>
+                <div class="uk-navbar-right">
+        
+    <?php
+        foreach ($db->query('SELECT name FROM users') as $users)
+        {
+        $name = $users["name"];
+            if ($name == 'Emma Fisher')
+            {
+            echo $name;
+            }
+        }
+    ?>
+    </div>
             </li>
             <li><a href="#">Troubleshooting</a></li>
         </ul>
