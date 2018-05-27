@@ -30,11 +30,22 @@ catch (PDOException $ex)
     <h1>PUBG Forum</h1>
     <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
+
         <ul class="uk-navbar-nav">
-            <li class="uk-active">News<a href=""></a></li>
-            <li class="uk-parent">Troubleshooting<a href=""></a></li>
-            <li><a href=""></a></li>
+            <li class="uk-active"><a href="#">Active</a></li>
+            <li>
+                <a href="#">Parent</a>
+                <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li class="uk-active"><a href="#">Active</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Troubleshoot</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Item</a></li>
         </ul>
+
     </div>
 </nav>
 
