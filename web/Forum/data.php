@@ -33,7 +33,7 @@ catch (PDOException $ex)
         foreach ($db->query('SELECT name, FROM users') as $users)
         {
         $name = $users["name"];
-        echo $name;
+        echo "<p>$name</p>";
         }
     ?>
     </div>
@@ -54,13 +54,8 @@ catch (PDOException $ex)
             </li>
             <li><a href="#">Troubleshooting</a></li>
         </ul>
-
     </div>
 </nav>
-
-    <ul>
-
-    </ul>
 
  
 </body>
