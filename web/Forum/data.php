@@ -81,16 +81,7 @@ catch (PDOException $ex)
     </div>
     <div class="uk-card-body">
         <p>
-            <?php
-            foreach ($db->query('SELECT desc_text FROM threads') as $thread)
-            {
-                $text = $thread["desc_text"];
-                if($title == "UPDATE 1.01")
-                {
-                echo $text;
-                }
-            }
-            ?>
+         
         </p>
     </div>
     <div class="uk-card-footer">
