@@ -54,8 +54,7 @@ foreach($threads as $thread)
 {
     $title = $thread['title'];
     $comments = $thread['desc_text'];
-echo "
- <div class='uk-card uk-card-default'>
+echo "<div class='uk-card uk-card-default'>
     <div class='uk-card-header'>
         <div class='uk-grid-small uk-flex-middle' uk-grid>
             <div class='uk-width-expand'>
@@ -70,8 +69,8 @@ echo "
     <div class='uk-card-footer'>
         <a href='#' class='uk-button uk-button-text'>Comments</a>
     </div>
-</div>"
-        }
+</div>";
+}
 ?> 
 </body>
 </html>
