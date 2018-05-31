@@ -6,7 +6,7 @@ $query = "SELECT title, desc_text FROM threads";
 $statement = $db->prepare($query);
 // Bind any variables i need here
 $statement->execute();
-$courses = $statement->fetchALL(PDO::FETCH_ASSOC);
+$threads = $statement->fetchALL(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html>
@@ -49,38 +49,29 @@ $courses = $statement->fetchALL(PDO::FETCH_ASSOC);
     </div>
 </nav>
 
- <div class="uk-card uk-card-default">
-    <div class="uk-card-header">
-        <div class="uk-grid-small uk-flex-middle" uk-grid>
-            <div class="uk-width-expand">
-                <h3 class="uk-card-title uk-margin-remove-bottom"> 
-                 <?php
-                foreach ($db->query('SELECT title FROM threads') as $thread)
-                {
-                $text = $thread["title"];
-                echo $text;
-                }
-                 ?>
-              </h3>
-                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
+<?php
+foreach($threads as $thread)
+{
+    $title = $thread['title'];
+    $comments = $thread['desc_text'];
+echo "
+ <div class='uk-card uk-card-default'>
+    <div class='uk-card-header'>
+        <div class='uk-grid-small uk-flex-middle' uk-grid>
+            <div class='uk-width-expand'>
+                <h3 class='uk-card-title uk-margin-remove-bottom'> $title </h3>
+                <p class='uk-text-meta uk-margin-remove-top'><time datetime='2016-04-01T19:00'>April 01, 2016</time></p>
             </div>
         </div>
     </div>
-    <div class="uk-card-body">
-        <p>
-        <?php
-            foreach ($db->query('SELECT desc_text FROM threads') as $thread)
-            {
-                $text = $thread["desc_text"];
-                echo $text;
-            }
-            ?>
-        </p>
+    <div class='uk-card-body'>
+        <p> $comments </p>
     </div>
-    <div class="uk-card-footer">
-        <a href="#" class="uk-button uk-button-text">Comments</a>
+    <div class='uk-card-footer'>
+        <a href='#' class='uk-button uk-button-text'>Comments</a>
     </div>
-</div>
-    
+</div>"
+        }
+?> 
 </body>
 </html>
