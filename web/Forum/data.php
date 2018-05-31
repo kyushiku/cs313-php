@@ -2,9 +2,11 @@
 require("db.php");
 $db = get_db();
 
+$query = "SELECT title, desc_text FROM threads";
 $statement = $db->prepare($query);
 // Bind any variables i need here
-$statement->execute()->fetchALL(PDO::FETCH_ASSOC);
+$statement->execute();
+$courses = $statement->fetchALL(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html>
