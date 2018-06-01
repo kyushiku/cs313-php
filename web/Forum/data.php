@@ -47,7 +47,11 @@ $threads = $statement->fetchALL(PDO::FETCH_ASSOC);
         </ul>
     </div>
     <div class ="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+            <li>
             <a href="details.php">New Thread</a>
+            </li>
+        </ul>
     </div>
 </nav>
 
