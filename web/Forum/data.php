@@ -32,7 +32,6 @@ $threads = $statement->fetchALL(PDO::FETCH_ASSOC);
     
     <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
-
         <ul class="uk-navbar-nav">
             <li>
                 <a href="#">News</a>
@@ -45,10 +44,12 @@ $threads = $statement->fetchALL(PDO::FETCH_ASSOC);
                 </div>
             </li>
             <li><a href="#">Troubleshooting</a></li>
-            <li class="uk-navbar-right">
-                <a href="details.php">New Thread</a>
-            </li>
         </ul>
+    </div>
+    <div>
+        <li>
+            <a href="details.php">New Thread</a>
+        </li>
     </div>
 </nav>
 
