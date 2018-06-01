@@ -69,6 +69,12 @@ echo "<div class='uk-card uk-card-default'>
     <div class='uk-card-footer'>
         <a href='#' class='uk-button uk-button-text'>Comments</a>
     </div>
+    <div class='uk-card-body'>
+    <p> $comments </p>
+    </div>
+    <div class='uk-card-footer'>
+    <a href='#' class='uk-button uk-button-text'>Comments</a>
+    </div>
 </div>";
 }
 ?> 
