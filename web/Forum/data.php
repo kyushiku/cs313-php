@@ -45,6 +45,9 @@ $threads = $statement->fetchALL(PDO::FETCH_ASSOC);
                 </div>
             </li>
             <li><a href="#">Troubleshooting</a></li>
+            <li class="uk-navbar-right">
+                <a href="details.php">New Thread</a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -65,9 +68,6 @@ echo "<div class='uk-card uk-card-default'>
     </div>
     <div class='uk-card-body'>
         <p> $comments </p>
-    </div>
-    <div class='uk-card-footer'>
-        <a href='#' class='uk-button uk-button-text'>Comments</a>
     </div>
     <div class='uk-card-footer'>
         <a href='#' class='uk-button uk-button-text'>Comments</a>
