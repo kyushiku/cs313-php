@@ -11,8 +11,7 @@ $query = "INSERT INTO threads (title, desc_text) VALUES (:title, :desc_text)";
 $statement = $db->prepare($query);
 $statement->bindValue(":title", $title, PDO::PARAM_INT);
 $statement->bindValue(":desc_text", $content, PDO::PARAM_STR);
-$statement->bindValue(":date", $date, PDO::PARAM_STR);
 $statement->execute();
-header("Location: courseDetails.php?course_id=$title");
+//header("Location: courseDetails.php?course_id=$title");
 die();
 ?>
