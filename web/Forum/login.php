@@ -13,7 +13,7 @@ $user = htmlspecialchars($_GET["users_id"]);
 
 <form action="create_user.php" method="POST">
 <input type="text" name="username"><br>
-<input type="text" name="pass"><br>
+<input type="password" name="pass"><br>
 
 <input type="submit" value="Add User">
 </form>
