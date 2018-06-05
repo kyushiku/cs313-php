@@ -12,10 +12,10 @@ $user = htmlspecialchars($_GET["users_id"]);
 </head>
 
 <form action="create_user.php" method="POST">
-<input type="text" name="username"><br>
-<input type="password" name="pass"><br>
+<div>Username:</div><input type="text" name="username"><br>
+<div>Password:</div><input type="password" name="pass"><br>
 
-<input type="submit" value="Add User">
+<input type="submit" value="Login">
 </form>
 <a href='register.php' class='uk-button uk-button-text'>Register Here!</a>
 
