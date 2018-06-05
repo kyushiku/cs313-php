@@ -12,7 +12,7 @@ $pass = htmlspecialchars($_POST["pass"]);
 $passwordHash = password_hash($pass, PASSWORD_DEFAULT);
 
 $db = get_db();
-$query = "INSERT INTO users (username, pass) VALUES ($user, $passwordHash)";
+$query = "INSERT INTO users (username, pass) VALUES (:username, :pass)";
 $statement = $db->prepare($query);
 $statement->bindValue(":username", $user, PDO::PARAM_STR);
 $statement->bindValue(":pass", $pass, PDO::PARAM_STR);
