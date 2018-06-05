@@ -12,6 +12,6 @@ $statement = $db->prepare($query);
 $statement->bindValue(":title", $title, PDO::PARAM_INT);
 $statement->bindValue(":desc_text", $content, PDO::PARAM_STR);
 $statement->execute();
-//header("Location: courseDetails.php?course_id=$title");
+header("Location: data.php");
 die();
 ?>
