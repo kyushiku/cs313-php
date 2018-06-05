@@ -22,7 +22,7 @@ if (password_verify($pass, $realPass)){
     header("Location: data.php");
 }
 else {
-    header("Location: validate.php");
+    echo "Wrong";
 }
 //header("Location: data.php");
 ?>
