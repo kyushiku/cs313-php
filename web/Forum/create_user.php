@@ -8,15 +8,15 @@ require("db.php");
 <body>
 <?php
 $username = htmlspecialchars($_POST["username"]);
-$user = htmlspecialchars($_POST["user"]);
+$name = htmlspecialchars($_POST["name"]);
 $pass = htmlspecialchars($_POST["pass"]);
 $passwordHash = password_hash($pass, PASSWORD_DEFAULT);
 
 $db = get_db();
-$query = "INSERT INTO users (username, user, pass) VALUES (:username, :user, :pass)";
+$query = "INSERT INTO users (username, name, pass) VALUES (:username, :name, :pass)";
 $statement = $db->prepare($query);
 $statement->bindValue(":username", $username, PDO::PARAM_STR);
-$statement->bindValue(":user", $user, PDO::PARAM_STR);
+$statement->bindValue(":name", $name, PDO::PARAM_STR);
 $statement->bindValue(":pass", $pass, PDO::PARAM_STR);
 $statement->execute();
 header("Location: data.php");
