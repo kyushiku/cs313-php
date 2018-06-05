@@ -11,7 +11,7 @@ $user = htmlspecialchars($_GET["users_id"]);
 <link rel="stylesheet" href="css/uikit-rtl.min.css" type="text/css">
 </head>
 
-<form action="create_user.php" method="POST">
+<form action="validate.php" method="POST">
 <div>Username:</div><input type="text" name="username"><br>
 <div>Password:</div><input type="password" name="pass"><br>
 
