@@ -17,7 +17,7 @@ $query = "INSERT INTO users (username, name, pass) VALUES (:username, :name, :pa
 $statement = $db->prepare($query);
 $statement->bindValue(":username", $username, PDO::PARAM_STR);
 $statement->bindValue(":name", $name, PDO::PARAM_STR);
-$statement->bindValue(":pass", $pass, PDO::PARAM_STR);
+$statement->bindValue(":pass", $passwordHash, PDO::PARAM_STR);
 $statement->execute();
 header("Location: data.php");
 ?>
