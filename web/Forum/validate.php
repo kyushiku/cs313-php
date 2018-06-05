@@ -19,10 +19,10 @@ $statement->bindValue(":username", $username, PDO::PARAM_STR);
 $statement->execute();
 $realPass = $statement->fetch();
 if (password_verify($pass, $realPass)){
-    echo "real pass!!";
+    header("Location: data.php");
 }
 else {
-    echo "nope";
+    header("Location: validate.php");
 }
 //header("Location: data.php");
 ?>
