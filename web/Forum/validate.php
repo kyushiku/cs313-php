@@ -18,7 +18,9 @@ $statement = $db->prepare($query);
 $statement->bindValue(":username", $username, PDO::PARAM_STR);
 $statement->execute();
 $realPass = $statement->fetch();
-if (password_verify($pass, $realPass)){
+
+
+if (password_verify($pass, $realPass["pass"])){
     header("Location: data.php");
 }
 else {

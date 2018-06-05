@@ -2,9 +2,7 @@
 $title = htmlspecialchars($_POST["title"]);
 $content = htmlspecialchars($_POST["desc_text"]);
 
-// echo "Course: $courseId\n";
-// echo "date: $date\n";
-// echo "content: $content\n";
+
 require("db.php");
 $db = get_db();
 $query = "INSERT INTO threads (title, desc_text) VALUES (:title, :desc_text)";
