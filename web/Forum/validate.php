@@ -24,9 +24,9 @@ if (password_verify($pass, $realPass["pass"])){
     header("Location: data.php");
 }
 else {
-    echo "Wrong";
+    echo "Wrong Password";
+    header("Location: validate.php")
 }
-//header("Location: data.php");
 ?>
 </body>
 
