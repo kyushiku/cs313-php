@@ -5,6 +5,9 @@ require("db.php");
 <!DOCTYPE>
 <html>
 <head>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="css/uikit-rtl.min.css" type="text/css">
 </head>
 <body>
 <?php
@@ -25,7 +28,6 @@ if (password_verify($pass, $realPass["pass"])){
 }
 else {
     echo "Wrong Password";
-    header("Location: validate.php");
 }
 ?>
 </body>
