@@ -91,7 +91,7 @@ echo "<div class='uk-card uk-card-default'>
         }
         */
 
-        foreach ($db->query("SELECT comm_text, users_id, comment_date FROM comments WHERE threads_id = $thread_id") as $comment) {
+        foreach ($db->query("SELECT comm_text FROM comments WHERE threads_id = $thread_id") as $comment) {
             echo "<p>" . $comment["comm_text"] . "</p>";
         }
         
