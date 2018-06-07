@@ -75,7 +75,7 @@ echo "<div class='uk-card uk-card-default'>
     </div>
     <div class='uk-card-footer'>
         <form>
-        <button class='uk-button uk-button-text'>Comments</button>
+        <button class='uk-button uk-button-text'>Comments </button>
         </form>";
 
         $comment = $db->prepare("SELECT comm_text, users_id, comment_date FROM comments WHERE threads_id = :thread_id");
@@ -86,9 +86,7 @@ echo "<div class='uk-card uk-card-default'>
         $comment->bindColumn(3, $date);
 
         while($comment->fetch()){
-            echo "<div>". $text . "</div>";
-
-
+            echo "<p>". $text . "</p>";
         }
         
 
