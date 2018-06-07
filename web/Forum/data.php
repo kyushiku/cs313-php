@@ -78,6 +78,7 @@ echo "<div class='uk-card uk-card-default'>
         <button class='uk-button uk-button-text'>Comments </button>
         </form>";
 
+        /*
         $comment = $db->prepare("SELECT comm_text, users_id, comment_date FROM comments WHERE threads_id = :thread_id");
         $comment->bindValue(':thread_id', $thread_id, PDO::PARAM_STR);
         $comment->execute();
@@ -87,6 +88,11 @@ echo "<div class='uk-card uk-card-default'>
 
         while($comment->fetch()){
             echo "<p>". $text . "</p>";
+        }
+        */
+
+        foreach ($db->query("SELECT comm_text, users_id, comment_date FROM comments WHERE threads_id = $thread_id") as $comment) {
+            echo "<p>" . $comment["comm_text"] . "</p>";
         }
         
 
