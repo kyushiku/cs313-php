@@ -78,7 +78,7 @@ echo "<div class='uk-card uk-card-default'>
         <button class='uk-button uk-button-text'>Comments </button>
         </form>
     </div>
-</div>"
+</div>";
 }
 ?> 
 <a href='login.php' class='uk-button uk-button-text'>Login</a>
