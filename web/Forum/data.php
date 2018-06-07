@@ -58,6 +58,7 @@ $threads = $statement->fetchALL(PDO::FETCH_ASSOC);
 <?php
 foreach($threads as $thread)
 {
+    $thread_id = $thread['id'];
     $title = $thread['title'];
     $comments = $thread['desc_text'];
 echo "<div class='uk-card uk-card-default'>
@@ -73,8 +74,26 @@ echo "<div class='uk-card uk-card-default'>
         <p> $comments </p>
     </div>
     <div class='uk-card-footer'>
-        <a href='#' class='uk-button uk-button-text'>Comments</a>
-    </div>
+        <form>
+        <button class='uk-button uk-button-text'>Comments</button>
+        </form>";
+
+        $comment = $db->prepare("SELECT comm_text, users_id, comment_date FROM comments WHERE threads_id = :thread_id");
+        $comment->bindValue(':thread_id', $thread_id, PDO::PARAM_STR);
+        $comment->execute();
+        $comment->bindColumn(1, $text);
+        $comment->bindColumn(2, $user);
+        $comment->bindColumn(3, $date);
+
+        while($comment->fetch()){
+            echo "<div>". $text . "</div>";
+
+
+        }
+        
+
+        
+    echo "</div>
 </div>";
 }
 ?> 
