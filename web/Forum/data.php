@@ -12,12 +12,14 @@ else
 	die(); // we always include a die after redirects.
 }
 
-$query = "SELECT threads.title, threads.desc_text, comments.comm_text, comments.comment_date, comments.users_id 
-FROM threads,comments WHERE threads.id = comments.threads_id";
+$query = "SELECT threads.title, threads.desc_text FROM threads";
 $statement = $db->prepare($query);
-// Bind any variables i need here
 $statement->execute();
 $threads = $statement->fetchALL(PDO::FETCH_ASSOC);
+$query2 = "SELECT comments.comm_text, comments.users_id, comments.threads_id, comments.comment_date FROM comments";
+$statement = $db->prepare($query2);
+$statement->execute();
+$comments = $statement->fetchALL(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html>
