@@ -5,6 +5,9 @@ html {
 #name{
     background-color: Khaki;
 }
+#signOut{
+    padding-bottom:15px;
+}
 a:link {
     text-decoration: none;
 }
