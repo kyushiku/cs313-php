@@ -1,7 +1,7 @@
 <?php
 require("db.php");
-$title = htmlspecialchars($_GET["threads_id"]);
-echo $title . "THIS IS WHAT STUFF LOOKS LIKE";
+//$title = htmlspecialchars($_GET["threads_id"]);
+echo document.getElementById('threads_id').value;
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,7 +15,7 @@ echo $title . "THIS IS WHAT STUFF LOOKS LIKE";
 <textarea name="comm_text" placeholder="Content"></textarea>
 <input type="hidden" name="threads_id" value="<?php echo $title; ?>">
 <br><br>
-<input type="submit" value="Add Thread">
+<input type="submit" value="Comment">
 </form>
 </body>
 </html>
