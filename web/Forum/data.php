@@ -12,7 +12,7 @@ else
 	die(); // we always include a die after redirects.
 }
 
-$query = "SELECT threads.title, threads.desc_text FROM threads";
+$query = "SELECT title, desc_text FROM threads";
 $statement = $db->prepare($query);
 $statement->execute();
 $threads = $statement->fetchALL(PDO::FETCH_ASSOC);
@@ -66,7 +66,7 @@ foreach($threads as $thread)
     $thread_id = $thread['id'];
     $title = $thread['title'];
     $comments = $thread['desc_text'];
-    echo $thread_id;
+    echo $thread_id . "WHAT IS THIS";
 echo "<div class='uk-card uk-card-default'>
     <div class='uk-card-header'>
         <div class='uk-grid-small uk-flex-middle' uk-grid>
