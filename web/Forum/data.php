@@ -91,6 +91,8 @@ foreach($comm as $comment)
     echo"
     <article class='uk-comment'>
     <header class='uk-comment-header uk-grid-medium uk-flex-middle' uk-grid>
+    <div class='uk-width-auto'>
+    </div>
         <div class='uk-width-expand'>
             <h4 class='uk-comment-title uk-margin-remove'><a class='uk-link-reset' href='#'>Author</a></h4>
             <ul class='uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top'>
@@ -102,7 +104,7 @@ foreach($comm as $comment)
     <div class='uk-comment-body'>
         <p>$text</p>
     </div>
-</article>";
+    </article>";
 }
 ?> 
 <a href='SignOut.php' class='uk-button uk-button-text'>Sign Out!</a>
