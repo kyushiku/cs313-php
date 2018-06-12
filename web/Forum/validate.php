@@ -1,7 +1,4 @@
 
-<?php
-require("db.php");
-?>
 <!DOCTYPE>
 <html>
 <head>
@@ -11,24 +8,38 @@ require("db.php");
 </head>
 <body>
 <?php
-$username = htmlspecialchars($_POST["username"]);
-$pass = htmlspecialchars($_POST["pass"]);
-
-
+//require("password.php");
+// get the data from the POST
+$username = $_POST['username'];
+$password = $_POST['pass'];
+if (!isset($username) || $username == ""
+	|| !isset($password) || $password == "")
+{
+	header("Location: login.php");
+	die(); // we always include a die after redirects.
+}
+// Let's not allow HTML in our usernames. It would be best to also detect this before
+// submitting the form and preven the submission.
+$username = htmlspecialchars($username);
+// Get the hashed password.
+$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+// Connect to the database
+require("db.php");
 $db = get_db();
-$query = "SELECT pass FROM users WHERE username = :username";
+$query = 'INSERT INTO login(username, password) VALUES(:username, :password)';
 $statement = $db->prepare($query);
-$statement->bindValue(":username", $username, PDO::PARAM_STR);
+$statement->bindValue(':username', $username);
+// **********************************************
+// NOTICE: We are submitting the hashed password!
+// **********************************************
+$statement->bindValue(':password', $hashedPassword);
 $statement->execute();
-$realPass = $statement->fetch();
-
-
-if (password_verify($pass, $realPass["pass"])){
-    header("Location: data.php");
-}
-else {
-    echo "Wrong Password";
-}
+// finally, redirect them to the sign in page
+header("Location: login.php");
+die(); // we always include a die after redirects. In this case, there would be no
+       // harm if the user got the rest of the page, because there is nothing else
+       // but in general, there could be things after here that we don't want them
+       // to see.
 ?>
 </body>
 
