@@ -1,4 +1,6 @@
 <?php
+require("db.php");
+include 'data.php';
 if($_SERVER['REQUEST_METHOD'] != 'POST')
 {
     //someone is calling the file directly, which we don't want
