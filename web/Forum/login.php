@@ -9,6 +9,7 @@ if (isset($_SESSION['username']))
 }
 else
 {
+    header("Location: data.php");
 	die(); // we always include a die after redirects.
 }
 ?>
