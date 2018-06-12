@@ -12,7 +12,7 @@ else
 	die(); // we always include a die after redirects.
 }
 
-$query = "SELECT title, desc_text FROM threads";
+$query = "SELECT title, desc_text, comm_text, comments.date, comments.user_id FROM threads,comments WHERE id = threads_id";
 $statement = $db->prepare($query);
 // Bind any variables i need here
 $statement->execute();
@@ -80,6 +80,25 @@ echo "<div class='uk-card uk-card-default'>
         </form>
     </div>
 </div>";
+}
+foreach($threads as $comment)
+{
+    $text = $comment['comm_text'];
+    echo"
+    <article class='uk-comment'>
+    <header class='uk-comment-header uk-grid-medium uk-flex-middle' uk-grid>
+        <div class='uk-width-expand'>
+            <h4 class='uk-comment-title uk-margin-remove'><a class='uk-link-reset' href='#'>Author</a></h4>
+            <ul class='uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top'>
+                <li><a href='#'>12 days ago</a></li>
+                <li><a href='#'>Reply</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class='uk-comment-body'>
+        <p>$text</p>
+    </div>
+</article>";
 }
 ?> 
 <a href='SignOut.php' class='uk-button uk-button-text'>Sign Out!</a>
