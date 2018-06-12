@@ -78,7 +78,7 @@ if ($badLogin)
 
 <h1>Please sign in below:</h1>
 
-<form id="mainForm" action="register.php" method="POST">
+<form id="mainForm" action="data.php" method="POST">
 
 	<div>Username:</div><input type="text" name="username"><br>
     <div>Password:</div><input type="password" name="pass"><br>
