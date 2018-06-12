@@ -81,7 +81,7 @@ echo "<div class='uk-card uk-card-default'>
     <div class='uk-card-footer'>
         <form action='comment.php method = 'POST'>
         <input type='hidden' name='threads_id' value='$thread_id'>
-        <type = 'submit' value = 'Comments'>
+        <input type = 'submit' value = 'Comments' class ='uk-button uk-button-text'>
         </form>
     </div>
 </div>";
