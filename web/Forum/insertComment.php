@@ -22,7 +22,7 @@ else
 
     require("db.php");
     $db = get_db();
-    $query = "INSERT INTO comments (comm_text, users_id, threads_id) VALUES (:text, :user_id, :thread_id)";
+    $query = "INSERT INTO comments (comm_text, users_id, threads_id, thread_date) VALUES (:text, :user_id, :thread_id, :date)";
     $statement = $db->prepare($query);
     $statement->bindValue(":text", $text, PDO::PARAM_STR);
     $statement->bindValue(":user_id", $user_id, PDO::PARAM_STR);
