@@ -98,6 +98,8 @@ foreach($comm as $comment)
     <article class='uk-comment'>
     <header class='uk-comment-header uk-grid-medium uk-flex-middle' uk-grid>
     <div class='uk-width-auto'>
+    <img class='uk-comment-avatar' src='../docs/images/avatar.jpg' width='80' height='80' alt=''>
+        </div>
     </div>
         <div class='uk-width-expand'>
             <h4 class='uk-comment-title uk-margin-remove'><a class='uk-link-reset' href='#'>$author</a></h4>

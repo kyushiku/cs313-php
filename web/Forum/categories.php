@@ -89,10 +89,13 @@ echo "<div class='uk-card uk-card-default'>
     </div>
 </div>";
     }
-}
+
 foreach($comm as $comment)
 {
     $text = $comment['comm_text'];
+    $author = $comment['users_id'];
+    $t_id = $comment['threads_id'];
+    if ($t_id == $thread_id){
     echo"
     <article class='uk-comment'>
     <header class='uk-comment-header uk-grid-medium uk-flex-middle' uk-grid>
@@ -108,6 +111,8 @@ foreach($comm as $comment)
         <p>$text</p>
     </div>
 </article>";
+    }
+}
 }
 ?> 
 <a href='SignOut.php' class='uk-button uk-button-text'>Sign Out!</a>
