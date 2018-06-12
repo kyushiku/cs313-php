@@ -97,7 +97,7 @@ foreach($comm as $comment)
     echo"
     <div id='comment'>
         <div class='uk-card uk-card-default uk-card-small uk-card-body'>
-            <h3 class='uk-card-title'>Small</h3>
+            <h3 class='uk-card-title'>$author</h3>
             <p>$text</p>
         </div>
     </div>
