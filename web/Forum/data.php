@@ -101,7 +101,7 @@ foreach($comm as $comment)
             <h3 class='uk-card-title'>Small</h3>
             <p>$text</p>
         </div>
-    </div>
+    </div><br>
     ";
     }
 }
