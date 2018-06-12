@@ -79,8 +79,9 @@ echo "<div class='uk-card uk-card-default'>
         <p> $comments </p>
     </div>
     <div class='uk-card-footer'>
-        <form>
-        <a href = 'comment.php' value = $thread_id class ='uk-button uk-button-text'>Comments </a>
+        <form action='comment.php method = 'POST'>
+        <input type='hidden' name='threads_id' value='$thread_id'>
+        <type = 'submit' value = 'thread ID 'class ='uk-button uk-button-text'>Comments
         </form>
     </div>
 </div>";
