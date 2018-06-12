@@ -76,7 +76,7 @@ echo "<div class='uk-card uk-card-default'>
     </div>
     <div class='uk-card-footer'>
         <form>
-        <button class='uk-button uk-button-text'>Comments </button>
+        <a href = 'comment.php' class ='uk-button uk-button-text'>Comments </a>
         </form>
     </div>
 </div>";
