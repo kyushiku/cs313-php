@@ -66,6 +66,7 @@ foreach($threads as $thread)
     $thread_id = $thread['id'];
     $title = $thread['title'];
     $comments = $thread['desc_text'];
+    echo $thread_id;
 echo "<div class='uk-card uk-card-default'>
     <div class='uk-card-header'>
         <div class='uk-grid-small uk-flex-middle' uk-grid>
