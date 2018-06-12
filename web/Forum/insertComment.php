@@ -16,9 +16,9 @@ else
     else
     {
     $text = htmlspecialchars($_POST["comm_text"]);
-    $user_id = htmlspecialchars($_SESSION["users_id"]);
+    $user_id = htmlspecialchars($_SESSION['username']);
     $thread_id = htmlspecialchars($_POST["threads_id"]);
-    //$date = date("m/d/Y");
+    $date = date("m/d/Y");
 
     require("db.php");
     $db = get_db();
@@ -27,7 +27,7 @@ else
     $statement->bindValue(":text", $text, PDO::PARAM_STR);
     $statement->bindValue(":user_id", $user_id, PDO::PARAM_STR);
     $statement->bindValue(":thread_id", $thread_id, PDO::PARAM_INT);
-   // $statement->bindValue(":date", $date, PDO::PARAM_INT);
+    $statement->bindValue(":date", $date, PDO::PARAM_INT);
     $statement->execute();
     header("Location: data.php");
     die();
