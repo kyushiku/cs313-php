@@ -1,6 +1,16 @@
 <?php
 require("db.php");
 $db = get_db();
+session_start();
+if (isset($_SESSION['username']))
+{
+	$username = $_SESSION['username'];
+}
+else
+{
+	header("Location: data.php");
+	die(); // we always include a die after redirects.
+}
 
 $query = "SELECT title, desc_text FROM threads";
 $statement = $db->prepare($query);
@@ -18,13 +28,7 @@ $threads = $statement->fetchALL(PDO::FETCH_ASSOC);
 <body>
     <h1>PUBG Forum</h1>
      <div class="uk-position-top-right"> 
-    <?php
-        foreach ($db->query('SELECT name FROM users') as $users)
-        {
-        $name = $users["name"];
-            echo "Welcome! " . $name;
-        }
-    ?>
+     Welcome! <?= $username ?><br /><br />
     </div>
     
     <nav class="uk-navbar-container" uk-navbar>
