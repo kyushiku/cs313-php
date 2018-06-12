@@ -61,6 +61,7 @@ if (isset($_POST['username']) && isset($_POST['pass']))
 <html>
 <head>
 	<title>Sign In</title>
+    <a href = "data.php"> PUBG Forum </a>
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
     <link rel="stylesheet" href="css/uikit-rtl.min.css" type="text/css">
