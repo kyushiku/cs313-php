@@ -26,8 +26,8 @@ else
     $statement = $db->prepare($query);
     $statement->bindValue(":text", $text, PDO::PARAM_STR);
     $statement->bindValue(":user_id", $user_id, PDO::PARAM_STR);
-    $statement->bindValue(":thread_id", $thread_id, PDO::PARAM_STR);
-    $statement->bindValue(":date", $date, PDO::PARAM_STR);
+    $statement->bindValue(":thread_id", $thread_id, PDO::PARAM_INT);
+    $statement->bindValue(":date", $date, PDO::PARAM_INT);
     $statement->execute();
     header("Location: data.php");
     die();
