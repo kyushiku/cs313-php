@@ -8,7 +8,7 @@ if (isset($_SESSION['username']))
 }
 else
 {
-	header("Location: data.php");
+	header("Location: login.php");
 	die(); // we always include a die after redirects.
 }
 
