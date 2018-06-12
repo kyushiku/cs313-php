@@ -22,7 +22,6 @@ $threads = $statement->fetchALL(PDO::FETCH_ASSOC);
         foreach ($db->query('SELECT name FROM users') as $users)
         {
         $name = $users["name"];
-            if ($name == 'Emma Fisher')
             echo "Welcome! " . $name;
         }
     ?>
