@@ -95,23 +95,14 @@ foreach($comm as $comment)
     $t_id = $comment['threads_id'];
     if ($t_id == $thread_id){
     echo"
-    <article class='uk-comment'>
-    <header class='uk-comment-header uk-grid-medium uk-flex-middle' uk-grid>
-        <div class='uk-width-auto'>
-            <img class='uk-comment-avatar' src='../docs/images/avatar.jpg' width='80' height='80' alt=''>
+    <div class='uk-child-width-1-2@s' uk-grid>
+    <div>
+        <div class='uk-card uk-card-default uk-card-small uk-card-body'>
+            <h3 class='uk-card-title'>Small</h3>
+            <p>$text</p>
         </div>
-        <div class='uk-width-expand'>
-            <h4 class='uk-comment-title uk-margin-remove'><a class='uk-link-reset' href='#'>$author</a></h4>
-            <ul class='uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top'>
-                <li><a href='#'>12 days ago</a></li>
-                
-            </ul>
-        </div>
-    </header>
-    <div class='uk-comment-body'>
-        <p>$text</p>
     </div>
-    </article>";
+    ";
     }
 }
 }
