@@ -12,7 +12,7 @@ else
 $title = htmlspecialchars($_POST["title"]);
 $content = htmlspecialchars($_POST["desc_text"]);
 $category = htmlspecialchars($_POST["categories_id"]);
-$user_id = htmlspecialchars($_SESSION['users_id']);
+$user_id = htmlspecialchars($_SESSION['username']);
 
 require("db.php");
 $db = get_db();
