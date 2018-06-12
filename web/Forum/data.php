@@ -20,7 +20,7 @@ $threads = $statement->fetchALL(PDO::FETCH_ASSOC);
 $query2 = "SELECT comm_text, users_id, threads_id, comment_date FROM comments";
 $statement1 = $db->prepare($query2);
 $statement1->execute();
-$comments = $statement1->fetchALL(PDO::FETCH_ASSOC);
+$comm = $statement1->fetchALL(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html>
@@ -85,7 +85,7 @@ echo "<div class='uk-card uk-card-default'>
     </div>
 </div>";
 }
-foreach($comments as $comment)
+foreach($comm as $comment)
 {
     $text = $comment['comm_text'];
     echo"
