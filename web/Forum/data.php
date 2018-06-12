@@ -89,7 +89,7 @@ echo "<div class='uk-card uk-card-default'>
 foreach($comm as $comment)
 {
     $text = $comment['comm_text'];
-    $author = $comment['user_id'];
+    $author = $comment['users_id'];
     echo"
     <article class='uk-comment'>
     <header class='uk-comment-header uk-grid-medium uk-flex-middle' uk-grid>
