@@ -50,7 +50,7 @@ $threads = $statement->fetchALL(PDO::FETCH_ASSOC);
     <div class ="uk-navbar-right">
         <ul class="uk-navbar-nav">
             <li>
-            <a href="details.php">New Thread</a>
+            <a href="thread.php">New Thread</a>
             </li>
         </ul>
     </div>
