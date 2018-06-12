@@ -72,7 +72,7 @@ echo "<div class='uk-card uk-card-default'>
     <div class='uk-card-header'>
         <div class='uk-grid-small uk-flex-middle' uk-grid>
             <div class='uk-width-expand'>
-                <h3 class='uk-card-title uk-margin-remove-bottom'> $title </h3>
+                <h3 class='uk-card-title'> $title </h3>
                 <p class='uk-text-meta uk-margin-remove-top'><time datetime='2016-04-01T19:00'>$author</time></p>
             </div>
         </div>
@@ -101,7 +101,7 @@ foreach($comm as $comment)
             <h3 class='uk-card-title'>Small</h3>
             <p>$text</p>
         </div>
-    </div><br>
+    </div>
     ";
     }
 }
