@@ -80,7 +80,7 @@ echo "<div class='uk-card uk-card-default'>
     </div>
     <div class='uk-card-footer'>
         <form action='comment.php' method = 'POST'>
-        <input type='hidden' name='threads_id' value='$thread_id'>
+        <input type='hidden' name='threads_id' value="; echo $_POST[$thread_id]">
         <input type = 'submit' value = 'Comments' class ='uk-button uk-button-text'>
         </form>
     </div>
