@@ -23,9 +23,7 @@ $threads = $statement->fetchALL(PDO::FETCH_ASSOC);
         {
         $name = $users["name"];
             if ($name == 'Emma Fisher')
-            {
             echo "Welcome! " . $name;
-            }
         }
     ?>
     </div>
