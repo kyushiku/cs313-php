@@ -68,7 +68,7 @@ foreach($threads as $thread)
     $title = $thread['title'];
     $comments = $thread['desc_text'];
     $categorie_id = $thread['categories_id'];
-    if($categorie_id = $category)
+    if($category == $categorie_id)
     {
 echo "<div class='uk-card uk-card-default'>
     <div class='uk-card-header'>
