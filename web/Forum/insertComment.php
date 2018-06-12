@@ -17,7 +17,7 @@ else
     $text = htmlspecialchars($_POST["comm_text"]);
     $user_id = htmlspecialchars($_POST["users_id"]);
     $thread_id = htmlspecialchars($_POST["threads_id"]);
-    $date = NOW();
+    $date = date("m/d/Y");
 
     require("db.php");
     $db = get_db();
