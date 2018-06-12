@@ -1,5 +1,6 @@
 <?php
 require("db.php");
+$title = htmlspecialchars($_GET["threads_id"]);
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,6 +12,7 @@ require("db.php");
 <body>
 <form action="insertComment.php" method="POST">
 <textarea name="comm_text" placeholder="Content"></textarea>
+<input type="hidden" name="threads_id" value="<?php echo $tite; ?>">
 <br><br>
 <input type="submit" value="Add Thread">
 </form>
