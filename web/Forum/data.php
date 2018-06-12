@@ -95,13 +95,11 @@ foreach($comm as $comment)
     $t_id = $comment['threads_id'];
     if ($t_id == $thread_id){
     echo"
-    <div uk-grid>
-    <div>
+    <div id='comment'>
         <div class='uk-card uk-card-default uk-card-small uk-card-body'>
             <h3 class='uk-card-title'>Small</h3>
             <p>$text</p>
         </div>
-    </div>
     </div>
     ";
     }
