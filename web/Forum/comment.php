@@ -1,7 +1,7 @@
 <?php
 require("db.php");
 $title = htmlspecialchars($_GET["threads_id"]);
-echo $thread_id . "THIS IS WHAT STUFF LOOKS LIKE";
+echo $title . "THIS IS WHAT STUFF LOOKS LIKE";
 ?>
 <!DOCTYPE html>
 <html>
