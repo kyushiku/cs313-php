@@ -1,7 +1,7 @@
 <?php
 require("db.php");
 //$title = htmlspecialchars($_GET["threads_id"]);
-echo document.getElementById('threads_id').value;
+echo "document.getElementById('threads_id').value";
 ?>
 <!DOCTYPE html>
 <html>
