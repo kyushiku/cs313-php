@@ -2,6 +2,15 @@
 require("db.php");
 $db = get_db();
 session_start();
+if (isset($_SESSION['username']))
+{
+	$username = $_SESSION['username'];
+}
+else
+{
+    header("Location: login.php");
+	die(); // we always include a die after redirects.
+}
 
 $query = "SELECT title, desc_text FROM threads";
 $statement = $db->prepare($query);
