@@ -82,6 +82,6 @@ echo "<div class='uk-card uk-card-default'>
 </div>";
 }
 ?> 
-<a href='login.php' class='uk-button uk-button-text'>Login</a>
+<a href='SignOut.php' class='uk-button uk-button-text'>Sign Out!</a>
 </body>
 </html>
