@@ -22,7 +22,7 @@ else
                           comment_date) 
                 VALUES ('" . $_POST['comm_text'] . "',
                     " . $_SESSION['username'] . ",
-                        " . mysql_real_escape_string($_GET['id']) . ",
+                        " . $_POST['threads_id'] . ",
                         NOW()";
                          
         $result = mysql_query($sql);
