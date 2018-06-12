@@ -1,5 +1,4 @@
 <?php
-require("db.php");
 include 'data.php';
 if($_SERVER['REQUEST_METHOD'] != 'POST')
 {
