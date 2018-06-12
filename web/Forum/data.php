@@ -89,13 +89,14 @@ echo "<div class='uk-card uk-card-default'>
 foreach($comm as $comment)
 {
     $text = $comment['comm_text'];
+    $author = $comment['user_id'];
     echo"
     <article class='uk-comment'>
     <header class='uk-comment-header uk-grid-medium uk-flex-middle' uk-grid>
     <div class='uk-width-auto'>
     </div>
         <div class='uk-width-expand'>
-            <h4 class='uk-comment-title uk-margin-remove'><a class='uk-link-reset' href='#'>Author</a></h4>
+            <h4 class='uk-comment-title uk-margin-remove'><a class='uk-link-reset' href='#'>$author</a></h4>
             <ul class='uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top'>
                 <li><a href='#'>12 days ago</a></li>
                 <li><a href='#'>Reply</a></li>
