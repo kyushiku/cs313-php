@@ -4,7 +4,6 @@ session_start();
 if (isset($_SESSION['username']))
 {
     $username = $_SESSION['username'];
-    $thread_id = 0;
 }
 else
 {
