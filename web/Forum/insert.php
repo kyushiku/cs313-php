@@ -1,5 +1,14 @@
 <?php
-session.start();
+session_start();
+if (isset($_SESSION['username']))
+{
+	$username = $_SESSION['username'];
+}
+else
+{
+    header("Location: login.php");
+	die(); // we always include a die after redirects.
+}
 $title = htmlspecialchars($_POST["title"]);
 $content = htmlspecialchars($_POST["desc_text"]);
 $category = htmlspecialchars($_POST["categories_id"]);
