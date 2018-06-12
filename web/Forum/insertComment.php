@@ -3,7 +3,8 @@
 session_start();
 if (isset($_SESSION['username']))
 {
-	$username = $_SESSION['username'];
+    $username = $_SESSION['username'];
+    $thread_id = 0;
 }
 else
 {
@@ -19,7 +20,7 @@ else
     {
     $text = htmlspecialchars($_POST["comm_text"]);
     //$user_id = htmlspecialchars($_SESSION['username']);
-    $thread_id = htmlspecialchars($_POST["threads_id"]);
+    $thread_id = htmlspecialchars($_GET["threads_id"]);
     //$date = date('Y/m/d');
     //$date = new DateTime($date);
     require("db.php");
