@@ -24,16 +24,14 @@ else
     //$date = new DateTime($date);
     require("db.php");
     $db = get_db();
-    $query = "INSERT INTO comments (comm_text, threads_id);
-    SELECT @last := LAST_INSERT_ID();
-    VALUES (:text, :thread_id)";
+    $query = "INSERT INTO comments (comm_text, threads_id) VALUES (:text, :thread_id);";
     $statement = $db->prepare($query);
     $statement->bindValue(":text", $text, PDO::PARAM_STR);
     //$statement->bindValue(":user_id", $user_id, PDO::PARAM_INT);
     $statement->bindValue(":thread_id", $thread_id, PDO::PARAM_INT);
    // $statement->bindValue(":date", $date, PDO::PARAM_STR);
     $statement->execute();
-   header("Location: data.php");
+    header("Location: data.php");
     die();
     }
  ?>
