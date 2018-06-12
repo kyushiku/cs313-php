@@ -65,11 +65,15 @@ if ($badLogin)
 <h1>Please sign in below:</h1>
 
 <form id="mainForm" action="login.php" method="POST">
-
+<fieldset class="uk-fieldset">
+    <legend class="uk-legend">Please sign in below:</legend>
+    <div class="uk-margin">
 	<div>Username:</div><input type="text" name="username"><br>
+    </div>
     <div>Password:</div><input type="password" name="pass"><br>
 
-	<input type="submit" value="Sign In" />
+    <input type="submit" value="Sign In" />
+</fieldset>
 
 </form>
 
