@@ -84,7 +84,7 @@ echo "<div class='uk-card uk-card-default'>
     </div>
 </div>";
 }
-foreach($threads as $comment)
+foreach($comments as $comment)
 {
     $text = $comment['comm_text'];
     echo"
