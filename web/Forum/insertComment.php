@@ -1,5 +1,6 @@
 <?php
 //include 'data.php';
+session_start();
 if($_SERVER['REQUEST_METHOD'] != 'POST')
 {
     //someone is calling the file directly, which we don't want
