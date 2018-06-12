@@ -35,7 +35,6 @@ $comm = $statement1->fetchALL(PDO::FETCH_ASSOC);
      <div class="uk-position-top-right"> 
      Welcome! <?= $username ?><br /><br />
     </div>
-    <div class="uk-background-primary"></div>
     <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
@@ -96,13 +95,11 @@ foreach($comm as $comment)
     $t_id = $comment['threads_id'];
     if ($t_id == $thread_id){
     echo"
-    <div class='uk-child-width-1-2@s' uk-grid>
     <div>
         <div class='uk-card uk-card-default uk-card-small uk-card-body'>
             <h3 class='uk-card-title'>Small</h3>
             <p>$text</p>
         </div>
-    </div>
     </div>
     ";
     }
