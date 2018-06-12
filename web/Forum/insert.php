@@ -9,7 +9,7 @@ $query = "INSERT INTO threads (title, desc_text, categories_id) VALUES (:title, 
 $statement = $db->prepare($query);
 $statement->bindValue(":title", $title, PDO::PARAM_INT);
 $statement->bindValue(":desc_text", $content, PDO::PARAM_STR);
-$statement->bindValue(":category", $category, PDO::PARAM_STR);
+$statement->bindValue(":category", $category, PDO::PARAM_INT);
 $statement->execute();
 header("Location: data.php");
 die();
