@@ -5,7 +5,7 @@ $category = htmlspecialchars($_POST["categories_id"]);
 
 require("db.php");
 $db = get_db();
-$query = "INSERT INTO threads (title, desc_text) VALUES (:title, :desc_text, :category)";
+$query = "INSERT INTO threads (title, desc_text, categories_id) VALUES (:title, :desc_text, :category)";
 $statement = $db->prepare($query);
 $statement->bindValue(":title", $title, PDO::PARAM_INT);
 $statement->bindValue(":desc_text", $content, PDO::PARAM_STR);
