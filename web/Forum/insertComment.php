@@ -18,7 +18,7 @@ else
     $text = htmlspecialchars($_POST["comm_text"]);
     $user_id = htmlspecialchars($_SESSION['username']);
     $thread_id = htmlspecialchars($_POST["threads_id"]);
-    $date = date("m/d/Y");
+    $date = date("Y/m/d");
 
     require("db.php");
     $db = get_db();
