@@ -12,7 +12,7 @@ else
 	die(); // we always include a die after redirects.
 }
 
-$query = "SELECT title, desc_text FROM threads";
+$query = "SELECT title, desc_text, id FROM threads";
 $statement = $db->prepare($query);
 $statement->execute();
 $threads = $statement->fetchALL(PDO::FETCH_ASSOC);
