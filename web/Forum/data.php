@@ -16,10 +16,11 @@ $query = "SELECT threads.title, threads.desc_text FROM threads";
 $statement = $db->prepare($query);
 $statement->execute();
 $threads = $statement->fetchALL(PDO::FETCH_ASSOC);
+
 $query2 = "SELECT comm_text, users_id, threads_id, comment_date FROM comments";
-$statement = $db->prepare($query2);
-$statement->execute();
-$comments = $statement->fetchALL(PDO::FETCH_ASSOC);
+$statement1 = $db->prepare($query2);
+$statement1->execute();
+$comments = $statement1->fetchALL(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html>
 <html>
