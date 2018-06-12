@@ -25,7 +25,7 @@ else
                         " . $_POST['threads_id'] . ",
                         NOW()";
                          
-        $result = mysql_query($sql);
+       // $result = mysql_query($sql);
                          
         //if(!$result)
         //{
