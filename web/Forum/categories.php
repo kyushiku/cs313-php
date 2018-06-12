@@ -11,8 +11,9 @@ else
     header("Location: login.php");
 	die(); // we always include a die after redirects.
 }
+$category = htmlspecialchars($_GET['category']);
 
-$query = "SELECT threads.title, threads.desc_text FROM threads";
+$query = "SELECT threads.title, threads.desc_text, threads.categories_id FROM threads";
 $statement = $db->prepare($query);
 $statement->execute();
 $threads = $statement->fetchALL(PDO::FETCH_ASSOC);
@@ -66,6 +67,9 @@ foreach($threads as $thread)
     $thread_id = $thread['id'];
     $title = $thread['title'];
     $comments = $thread['desc_text'];
+    $categorie_id = $thread['categories_id'];
+    if($categorie_id = $category)
+    {
 echo "<div class='uk-card uk-card-default'>
     <div class='uk-card-header'>
         <div class='uk-grid-small uk-flex-middle' uk-grid>
@@ -84,6 +88,7 @@ echo "<div class='uk-card uk-card-default'>
         </form>
     </div>
 </div>";
+    }
 }
 foreach($comm as $comment)
 {
