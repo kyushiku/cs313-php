@@ -13,7 +13,7 @@ require("db.php");
 
 <form action="insertComment.php" method="POST">
 <textarea name="comm_text" placeholder="Content"></textarea>
-<input type="hidden" name="threads_id" value="<?php echo $_POST['threads_id']; ?>d">
+<input type="hidden" name="threads_id" value="<?php echo $_POST['threads_id']; ?>">
 <br><br>
 <input type="submit" value="Comment">
 </form>
