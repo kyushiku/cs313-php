@@ -39,16 +39,14 @@ $comm = $statement1->fetchALL(PDO::FETCH_ASSOC);
     <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
             <li>
-                <a href="#">News</a>
+                <a href="#">Categories</a>
                 <div class="uk-navbar-dropdown">
                     <ul class="uk-nav uk-navbar-dropdown-nav">
-                        <li class="uk-active"><a href="#">Active</a></li>
                         <li><a href="categories.php?category=1">News</a></li>
                         <li><a href="categories.php?category=2">Troubleshoot</a></li>
                     </ul>
                 </div>
             </li>
-            <li><a href="#">Troubleshooting</a></li>
         </ul>
     </div>
     <div class ="uk-navbar-right">
