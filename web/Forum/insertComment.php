@@ -16,7 +16,7 @@ else
     else
     {
     $text = htmlspecialchars($_POST["comm_text"]);
-    $user_id = htmlspecialchars($_POST["users_id"]);
+    $user_id = htmlspecialchars($_SESSION["users_id"]);
     $thread_id = htmlspecialchars($_POST["threads_id"]);
     $date = date("m/d/Y");
 
