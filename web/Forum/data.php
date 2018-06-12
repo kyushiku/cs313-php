@@ -32,8 +32,8 @@ $comm = $statement1->fetchALL(PDO::FETCH_ASSOC);
 </head>
 <body>
     <a style="font-size:28px" href = "data.php">PUBG Forum</a>
-    <a href='SignOut.php' id='signOut' class='uk-button uk-button-text'>Sign Out!</a>
-    <div class="uk-position-right"> 
+    <a href='SignOut.php' id='signOut' class='uk-button uk-button-text uk-position-top-right'>Sign Out!</a>
+    <div id="username"> 
      Welcome! <?= $username ?><br /><br />
     </div>
     
