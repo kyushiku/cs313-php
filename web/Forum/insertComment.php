@@ -24,17 +24,6 @@ else
                     " . $_SESSION['username'] . ",
                         " . $_POST['threads_id'] . ",
                         NOW()";
-                         
-       // $result = mysql_query($sql);
-                         
-        //if(!$result)
-        //{
-        //    echo 'Your reply has not been saved, please try again later.';
-        //}
-        //else
-        //{
-        //    echo 'Your reply has been saved, check out <a href="topic.php?id=' . htmlentities($_GET['id']) . '">the topic</a>.';
-        //}
     }
 }
  ?>
