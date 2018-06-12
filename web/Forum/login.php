@@ -49,6 +49,7 @@ if (isset($_POST['username']) && isset($_POST['pass']))
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
     <link rel="stylesheet" href="css/uikit-rtl.min.css" type="text/css">
+    <link rel="stylesheet" href = "style.css">
 </head>
 
 <body>
