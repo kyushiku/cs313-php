@@ -102,6 +102,7 @@ foreach($comm as $comment)
             <p>$text</p>
         </div>
     </div>
+    </div>
     ";
     }
 }
