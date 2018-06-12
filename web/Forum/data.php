@@ -34,6 +34,7 @@ $comm = $statement1->fetchALL(PDO::FETCH_ASSOC);
     <a style="font-size:28px" href = "data.php">PUBG Forum</a>
      <div class="uk-position-top-right"> 
      Welcome! <?= $username ?><br /><br />
+     <a href='SignOut.php' class='uk-button uk-button-text uk-position-right'>Sign Out!</a>
     </div>
     <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
@@ -104,6 +105,5 @@ foreach($comm as $comment)
 }
 }
 ?> 
-<a href='SignOut.php' class='uk-button uk-button-text'>Sign Out!</a>
 </body>
 </html>
