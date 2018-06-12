@@ -12,7 +12,7 @@ else
 	die(); // we always include a die after redirects.
 }
 
-$query = "SELECT title, desc_text, comm_text, comments.date, comments.user_id FROM threads,comments WHERE id = threads_id";
+$query = "SELECT title, desc_text, comm_text, comment_date, comments.user_id FROM threads,comments WHERE id = threads_id";
 $statement = $db->prepare($query);
 // Bind any variables i need here
 $statement->execute();
