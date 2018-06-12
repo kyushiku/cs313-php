@@ -22,7 +22,7 @@ else
     $thread_id = htmlspecialchars($_POST["threads_id"]);
     //$date = date('Y/m/d');
     //$date = new DateTime($date);
-        echo $thread_id;
+        echo $thread_id . 'THIS STUFF';
     require("db.php");
     $db = get_db();
     //$query = "INSERT INTO comments (comm_text, threads_id) VALUES (:text, :thread_id)";
