@@ -28,13 +28,14 @@ $comm = $statement1->fetchALL(PDO::FETCH_ASSOC);
    <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
     <link rel="stylesheet" href="css/uikit-rtl.min.css" type="text/css">
+    <link rel="stylesheet" href = "style.css">
 </head>
 <body>
     <h1>PUBG Forum</h1>
      <div class="uk-position-top-right"> 
      Welcome! <?= $username ?><br /><br />
     </div>
-    
+    <div class="uk-background-primary"></div>
     <nav class="uk-navbar-container" uk-navbar>
     <div class="uk-navbar-left">
         <ul class="uk-navbar-nav">
