@@ -31,7 +31,7 @@ $comm = $statement1->fetchALL(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href = "style.css">
 </head>
 <body>
-    <h1>PUBG Forum</h1>
+    <a style="font-size:28px" href = "data.php">PUBG Forum</a>
      <div class="uk-position-top-right"> 
      Welcome! <?= $username ?><br /><br />
     </div>
