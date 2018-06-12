@@ -1,6 +1,15 @@
 <?php
 //include 'data.php';
 session_start();
+if (isset($_SESSION['username']))
+{
+	$username = $_SESSION['username'];
+}
+else
+{
+    header("Location: login.php");
+	die(); // we always include a die after redirects.
+}
 if($_SERVER['REQUEST_METHOD'] != 'POST')
 {
     //someone is calling the file directly, which we don't want
