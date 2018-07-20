@@ -1,0 +1,19 @@
+{
+  "name": "awkward",
+  "version": "1.0.0",
+  "description": "",
+  "main": "access.js",
+  "scripts": {
+    "start": "node access.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "path": "^0.12.7",
+    "pg": "^7.4.3"
+  }
+}

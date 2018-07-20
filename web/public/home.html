@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+        <script src="match.js"></script>
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+     integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="container">
+        <h1>Welcome to Creeps are us :)</h1>
+        <button onclick="location.href='login.html'">Login or Sign up!</button>
+        <div class="row">
+            <div class="column">
+                <img class="image" src="creepy.jpg" alt="This Creepy guy">
+            </div>
+            <div class="column">
+                <img class="image" src="creepygirl.jpg" alt="This Creepy girl">
+            </div>
+        </div>
+        <button onclick="matched()">Interested</button>
+        <button onclick="notmatched()">Not Interested</button>
+        <h2 id="match"></h2>
+        <button onclick="getPerson()">GET STUFF</button>
+        <p id="demo"></p>
+
+        </div>
+    </body>
+</html>
